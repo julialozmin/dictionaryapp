@@ -1,0 +1,26 @@
+.WelcomePage header {
+  text-align: center;
+}
+
+.WelcomePage-header h1 {
+  font-family: var(--accent-font);
+  font-size: 150px;
+  color: var(--neutral-color);
+  margin: 0px 0px 20px;
+  padding-top: 150px;
+}
+
+.WelcomePage h5 {
+  font-family: var(--body-font);
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--blue-color);
+  margin-bottom: 50px;
+}
+
+.WelcomePage input {
+  font-family: var(--terciary-font);
+  font-size: 16px;
+  padding: 6px 8px 6px 8px;
+  margin-bottom: 150px;
+}

@@ -1,29 +1,10 @@
-.App {
+.App footer {
+  margin: 50px 0 50px;
   text-align: center;
-}
-
-.App-header {
-  background-color: var(--dark-color);
-}
-
-.App-header h1 {
-  font-family: var(--accent-font);
-  font-size: 150px;
-  color: var(--neutral-color);
-  margin: 0px 0px 20px;
-  padding-top: 150px;
-}
-
-.App h5 {
-  font-family: var(--body-font);
-  font-size: 30px;
-  font-weight: 500;
+  font-size: 14px;
   color: var(--blue-color);
-  margin-bottom: 50px;
 }
 
-.App input {
-  font-family: var(--terciary-font);
-  font-size: 16px;
-  padding: 6px 8px 6px 8px;
+.App footer a {
+  color: var(--blue-color);
 }
