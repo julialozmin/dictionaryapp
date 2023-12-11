@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ShowResults from "./ShowResults";
+import DefinitionDisplay from "./DefinitionDisplay";
 import axios from "axios";
 
 import "./WelcomePage.css";
@@ -7,10 +8,13 @@ import "./WelcomePage.css";
 export default function WelcomePage() {
   const [word, setWord] = useState("");
   const [data, setData] = useState({});
+  const [definitions, setDefinitions] = useState({});
   const [searchReady, setSearchReady] = useState(false);
 
   function handleResponse(response) {
     setData(response.data);
+    setDefinitions(response.data[0].meanings);
+
     setSearchReady(true);
   }
 
@@ -25,7 +29,12 @@ export default function WelcomePage() {
   }
 
   if (searchReady) {
-    return <ShowResults data={data} />;
+    return (
+      <div>
+        <ShowResults data={data} />
+        <DefinitionDisplay definitions={definitions} />
+      </div>
+    );
   } else {
     return (
       <div className="WelcomePage">

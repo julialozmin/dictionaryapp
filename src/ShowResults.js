@@ -15,9 +15,7 @@ export default function ShowResults(props) {
         </form>
       </header>
       <div className="content">
-        <h5>{props.data[0].word}</h5>
-
-        {/* <DefinitionDisplay /> */}
+        <h5 className="targetWord">{props.data[0].word}</h5>
       </div>
     </div>
   );

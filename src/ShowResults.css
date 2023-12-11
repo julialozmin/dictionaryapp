@@ -10,9 +10,9 @@
   padding-top: 50px;
 }
 
-.ShowResults h5 {
+.ShowResults .targetWord {
   font-family: var(--body-font);
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 500;
   color: var(--blue-color);
   margin-bottom: 50px;

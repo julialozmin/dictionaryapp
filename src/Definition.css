@@ -1,0 +1,19 @@
+.Definition {
+  font-size: 18px;
+  color: var(--dark-color);
+}
+
+.Definition h4 {
+  color: var(--tangerine);
+  font-size: 20px;
+}
+
+.Definition .definition {
+  margin-bottom: 0px;
+}
+
+.Definition .example {
+  margin-top: 0px;
+  margin-left: 10px;
+  font-style: italic;
+}
