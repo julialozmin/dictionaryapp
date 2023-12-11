@@ -6,14 +6,15 @@ function App() {
       <header className="App-header">
         <h1>dictionary</h1>
         <h5>
-          A picture is worth a thousand words, but you cannot explain pictures
-          without words
+          A picture is worth a thousand words,
+          <br />
+          but you cannot explain pictures without words
         </h5>
+        <form>
+          <input type="search" placeholder="..." />
+          <input type="submit" value="Search Word" />
+        </form>
       </header>
-      <form>
-        <input type="search" placeholder="..."></input>
-        <input type="submit">Search Word</input>
-      </form>
     </div>
   );
 }
