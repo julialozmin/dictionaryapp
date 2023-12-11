@@ -1,22 +1,31 @@
 import React, { useState } from "react";
 import ShowResults from "./ShowResults";
+import axios from "axios";
 
 import "./WelcomePage.css";
 
 export default function WelcomePage() {
   const [word, setWord] = useState("");
+  const [data, setData] = useState({});
   const [searchReady, setSearchReady] = useState(false);
+
+  function handleResponse(response) {
+    setData(response.data);
+    setSearchReady(true);
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
-    setSearchReady(true);
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+    axios.get(apiUrl).then(handleResponse);
   }
+
   function wordValue(event) {
     setWord(event.target.value);
   }
 
   if (searchReady) {
-    return <ShowResults targetWord={word} />;
+    return <ShowResults data={data} />;
   } else {
     return (
       <div className="WelcomePage">
