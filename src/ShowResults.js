@@ -3,8 +3,6 @@ import React from "react";
 import "./ShowResults.css";
 
 export default function ShowResults(props) {
-  console.log(props.data);
-
   return (
     <div className="ShowResults text-center">
       <h5 className="targetWord">{props.data[0].word}</h5>

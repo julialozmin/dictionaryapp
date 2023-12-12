@@ -4,7 +4,6 @@ import Definition from "./Definition";
 import "./DefinitionDisplay.css";
 
 export default function DefinitionsDisplay(props) {
-  console.log(props.definitions);
   if (props.definitions) {
     return (
       <div className="DefinitionsDisplay">
