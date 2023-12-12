@@ -8,11 +8,11 @@ export default function DefinitionsDisplay(props) {
     console.log(props.definitions);
     return (
       <div className="DefinitionsDisplay">
-        {props.definitions.map(function (definition, index) {
+        {props.definitions.map(function (meaning, index) {
           return (
             <div key={index}>
               {" "}
-              <Definition definition={definition} />{" "}
+              <Definition meanings={meaning} />{" "}
             </div>
           );
         })}
