@@ -7,17 +7,8 @@ export default function ShowResults(props) {
 
   return (
     <div className="ShowResults text-center">
-      <header className="ShowResults-header">
-        <h1>dictionary</h1>
-        <form>
-          <input type="search" placeholder="..." />
-          <input type="submit" value="Search Word" />
-        </form>
-      </header>
-      <div className="content">
-        <h5 className="targetWord">{props.data[0].word}</h5>
-        <h5 className="wordPhonetics">{props.data[0].phonetic}</h5>
-      </div>
+      <h5 className="targetWord">{props.data[0].word}</h5>
+      <h5 className="wordPhonetics">{props.data[0].phonetic}</h5>
     </div>
   );
 }

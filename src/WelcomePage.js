@@ -14,7 +14,6 @@ export default function WelcomePage() {
   function handleResponse(response) {
     setData(response.data);
     setDefinitions(response.data[0].meanings);
-
     setSearchReady(true);
   }
 
@@ -31,6 +30,14 @@ export default function WelcomePage() {
   if (searchReady) {
     return (
       <div>
+        <header className="WelcomePage-searchReady-header">
+          <h1>dictionary</h1>
+          <form onSubmit={handleSubmit}>
+            <input type="search" placeholder="..." onChange={wordValue} />
+            <input type="submit" value="Search Word" />
+          </form>
+        </header>
+
         <ShowResults data={data} />
         <DefinitionDisplay definitions={definitions} />
       </div>

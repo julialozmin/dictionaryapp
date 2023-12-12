@@ -24,3 +24,17 @@
   padding: 6px 8px 6px 8px;
   margin-bottom: 150px;
 }
+
+.WelcomePage-searchReady-header h1 {
+  font-family: var(--accent-font);
+  font-size: 120px;
+  color: var(--neutral-color);
+  margin: 0px 0px 20px;
+  padding-top: 50px;
+}
+
+.WelcomePage-searchReady-header input {
+  font-family: var(--terciary-font);
+  font-size: 14px;
+  padding: 6px 8px 6px 8px;
+}

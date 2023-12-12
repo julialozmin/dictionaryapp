@@ -1,21 +1,3 @@
-.ShowResults header {
-  text-align: center;
-}
-
-.ShowResults-header h1 {
-  font-family: var(--accent-font);
-  font-size: 120px;
-  color: var(--neutral-color);
-  margin: 0px 0px 20px;
-  padding-top: 50px;
-}
-
-.ShowResults input {
-  font-family: var(--terciary-font);
-  font-size: 14px;
-  padding: 6px 8px 6px 8px;
-}
-
 .ShowResults .targetWord {
   font-family: var(--body-font);
   font-size: 40px;
