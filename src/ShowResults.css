@@ -10,17 +10,26 @@
   padding-top: 50px;
 }
 
+.ShowResults input {
+  font-family: var(--terciary-font);
+  font-size: 14px;
+  padding: 6px 8px 6px 8px;
+}
+
 .ShowResults .targetWord {
   font-family: var(--body-font);
   font-size: 40px;
   font-weight: 500;
   color: var(--blue-color);
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
-.ShowResults input {
-  font-family: var(--terciary-font);
-  font-size: 14px;
-  padding: 6px 8px 6px 8px;
+.ShowResults .wordPhonetics {
+  font-family: var(--body-font);
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--blue-color);
+  margin: 0 0 30px;
+  text-align: center;
 }

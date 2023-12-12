@@ -5,8 +5,6 @@ import "./Definition.css";
 
 export default function Definition(props) {
   console.log(props.meanings);
-  console.log(props.meanings.partOfSpeech);
-  console.log(props.meanings.synonyms);
 
   return (
     <div className="Definition">
@@ -17,7 +15,6 @@ export default function Definition(props) {
             <p className="singleDefinition">{definition.definition}</p>
             <p className="example">{definition.example}</p>
             <Synonyms synonyms={definition.synonyms} />
-            {/* <p className="synonyms">{definition.synonyms}</p> */}
           </div>
         );
       })}

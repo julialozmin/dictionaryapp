@@ -4,8 +4,8 @@ import Definition from "./Definition";
 import "./DefinitionDisplay.css";
 
 export default function DefinitionsDisplay(props) {
+  console.log(props.definitions);
   if (props.definitions) {
-    console.log(props.definitions);
     return (
       <div className="DefinitionsDisplay">
         {props.definitions.map(function (meaning, index) {
