@@ -21,7 +21,6 @@ export default function WelcomePage() {
 
   function handleImagesResponse(response) {
     setPhotosData(response.data.photos);
-    console.log(response.data.photos);
   }
 
   function handleSubmit(event) {
@@ -41,27 +40,25 @@ export default function WelcomePage() {
 
   if (searchReady) {
     return (
-      <div className="searchReady">
+      <div className="WelcomePage-searchReady">
         <div className="row">
-          <div className="col-3">
-            <header className="WelcomePage-searchReady-header">
-              <h1>dictionary</h1>
-              <form onSubmit={handleSubmit}>
-                <input type="search" placeholder="..." onChange={wordValue} />
-                <input type="submit" value="Search Word" />
-              </form>
-            </header>
-            <ShowResults data={data} />
-          </div>
-
-          <div className="col-9">
-            <DefinitionDisplay definitions={definitions} />
+          <div className="col-12">
+            <h1 className="appLogo">dictionary</h1>
           </div>
         </div>
-
         <div className="row">
-          <div className="col-9">
+          <div className="col-3 menu-block">
+            <section className="WelcomePage-searchReady-menu">
+              <form onSubmit={handleSubmit} className="text-center">
+                <input type="search" placeholder="..." onChange={wordValue} />
+                <input type="submit" value="Search" />
+              </form>
+            </section>
+            <ShowResults data={data} />
             <ImagesDisplay data={photosData} />
+          </div>
+          <div className="col-9">
+            <DefinitionDisplay definitions={definitions} />
           </div>
         </div>
       </div>

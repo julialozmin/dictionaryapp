@@ -1,7 +1,6 @@
 .DefinitionsDisplay {
   background-color: var(--neutral-color);
-  max-width: 900px;
   display: block;
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px;
 }

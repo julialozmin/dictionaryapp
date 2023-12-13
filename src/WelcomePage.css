@@ -1,8 +1,4 @@
-.WelcomePage header {
-  text-align: center;
-}
-
-.WelcomePage-header h1 {
+.WelcomePage h1 {
   font-family: var(--accent-font);
   font-size: 150px;
   color: var(--neutral-color);
@@ -25,16 +21,21 @@
   margin-bottom: 150px;
 }
 
-.WelcomePage-searchReady-header h1 {
+.WelcomePage-searchReady .appLogo {
   font-family: var(--accent-font);
-  font-size: 120px;
+  font-size: 90px;
   color: var(--neutral-color);
   margin: 0px 0px 20px;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
-.WelcomePage-searchReady-header input {
+.menu-block div {
+  padding: 0 0 0 0;
+}
+
+.WelcomePage-searchReady-menu input {
   font-family: var(--terciary-font);
   font-size: 14px;
   padding: 6px 8px 6px 8px;
+  margin-top: 20px;
 }

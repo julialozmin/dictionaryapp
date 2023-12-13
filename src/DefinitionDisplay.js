@@ -6,7 +6,7 @@ import "./DefinitionDisplay.css";
 export default function DefinitionsDisplay(props) {
   if (props.definitions) {
     return (
-      <div className="DefinitionsDisplay">
+      <section className="DefinitionsDisplay">
         {props.definitions.map(function (meaning, index) {
           return (
             <div key={index}>
@@ -15,7 +15,7 @@ export default function DefinitionsDisplay(props) {
             </div>
           );
         })}
-      </div>
+      </section>
     );
   } else {
     return null;

@@ -6,10 +6,10 @@ export default function ImagesDisplay(props) {
   if (props.data) {
     return (
       <section className="ImagesDisplay">
-        <div className="row">
-          {props.data.map(function (image, index) {
+        {props.data.map(function (image, index) {
+          if (index < 5) {
             return (
-              <div className="col-3" key={index}>
+              <div className="image" key={index}>
                 <a href={image.src.original} target="_blank" rel="noreferrer">
                   <img
                     src={image.src.landscape}
@@ -19,8 +19,8 @@ export default function ImagesDisplay(props) {
                 </a>
               </div>
             );
-          })}
-        </div>
+          }
+        })}
       </section>
     );
   } else {

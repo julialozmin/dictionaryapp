@@ -4,11 +4,11 @@
   --blue-color: #9aaaba;
   --neutral-color: #bdbec1;
   --accent-font: Oswald;
-  --body-font: EB + Garamond;
-  --terciary-font: Roboto;
+  --body-font: Lato;
 }
 
 body {
   margin: 0 auto;
   background-color: var(--dark-color);
+  font-family: Lato;
 }
