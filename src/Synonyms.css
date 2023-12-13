@@ -6,6 +6,7 @@
 
 .Synonyms div {
   font-size: 16px;
+  font-weight: 300;
   border: 1px solid var(--dark-color);
   padding: 5px 10px;
   border-radius: 5px;

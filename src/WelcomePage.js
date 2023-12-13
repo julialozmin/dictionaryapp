@@ -24,14 +24,18 @@ export default function WelcomePage() {
   }
 
   function handleSubmit(event) {
-    event.preventDefault();
-    let dictionaryApiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-    axios.get(dictionaryApiUrl).then(handleDictionaryResponse);
+    if (word.length > 0) {
+      event.preventDefault();
+      let dictionaryApiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+      axios.get(dictionaryApiUrl).then(handleDictionaryResponse);
 
-    let imagesApiKey = `o214a6c6f6d2f53a6749b30tbf45c1ef`;
-    let imagesApiUrl = `https://api.shecodes.io/images/v1/search?query=${word}&key=${imagesApiKey}`;
+      let imagesApiKey = `o214a6c6f6d2f53a6749b30tbf45c1ef`;
+      let imagesApiUrl = `https://api.shecodes.io/images/v1/search?query=${word}&key=${imagesApiKey}`;
 
-    axios.get(imagesApiUrl).then(handleImagesResponse);
+      axios.get(imagesApiUrl).then(handleImagesResponse);
+    } else {
+      return null;
+    }
   }
 
   function wordValue(event) {
@@ -42,7 +46,7 @@ export default function WelcomePage() {
     return (
       <div className="WelcomePage-searchReady">
         <div className="row">
-          <div className="col-12">
+          <div className="col-12 header">
             <h1 className="appLogo">dictionary</h1>
           </div>
         </div>
