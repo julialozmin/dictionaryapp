@@ -11,7 +11,7 @@ export default function WelcomePage() {
   const [data, setData] = useState({});
   const [definitions, setDefinitions] = useState({});
   const [searchReady, setSearchReady] = useState(false);
-  const [photos, setPhotos] = useState(null);
+  let [photosData, setPhotosData] = useState(null);
 
   function handleDictionaryResponse(response) {
     setData(response.data);
@@ -19,21 +19,20 @@ export default function WelcomePage() {
     setSearchReady(true);
   }
 
-  function handlePexelsResponse(response) {
-    console.log(response);
+  function handleImagesResponse(response) {
+    setPhotosData(response.data.photos);
+    console.log(response.data.photos);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-    let pexelsApiKey =
-      "OeNdhjCml3zTVnSYDsO1kOvnzj96FhQsMVKy1qk7ejFvkIwiTMZXqfxqy";
-    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=1`;
-    let headers = { Authorization: `Bearer ${pexelsApiKey}` };
+    let dictionaryApiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+    axios.get(dictionaryApiUrl).then(handleDictionaryResponse);
 
-    axios.get(apiUrl).then(handleDictionaryResponse);
+    let imagesApiKey = `o214a6c6f6d2f53a6749b30tbf45c1ef`;
+    let imagesApiUrl = `https://api.shecodes.io/images/v1/search?query=${word}&key=${imagesApiKey}`;
 
-    axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
+    axios.get(imagesApiUrl).then(handleImagesResponse);
   }
 
   function wordValue(event) {
@@ -62,7 +61,7 @@ export default function WelcomePage() {
 
         <div className="row">
           <div className="col-9">
-            <ImagesDisplay />
+            <ImagesDisplay data={photosData} />
           </div>
         </div>
       </div>
