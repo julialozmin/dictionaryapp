@@ -6,14 +6,12 @@ export default function Synonyms(props) {
     return (
       <section className="Synonyms">
         {props.data.map(function (synonym, index) {
-          if (index < 6) {
-            return (
-              <div className="synonymResults" key={index}>
-                {" "}
-                {synonym}{" "}
-              </div>
-            );
-          }
+          return (
+            <div className="synonymResults" key={index}>
+              {" "}
+              {synonym}{" "}
+            </div>
+          );
         })}
       </section>
     );
