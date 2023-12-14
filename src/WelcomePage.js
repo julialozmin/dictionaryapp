@@ -51,7 +51,7 @@ export default function WelcomePage() {
           </div>
         </div>
         <div className="row">
-          <div className="col-3 menu-block">
+          <div className="col-lg-3 menu-section">
             <section className="WelcomePage-searchReady-menu">
               <form onSubmit={handleSubmit} className="text-center">
                 <input type="search" placeholder="..." onChange={wordValue} />
@@ -61,7 +61,7 @@ export default function WelcomePage() {
             <ShowResults data={data} />
             <ImagesDisplay data={photosData} />
           </div>
-          <div className="col-9">
+          <div className="col-lg-9 definitions-section">
             <DefinitionDisplay definitions={definitions} />
           </div>
         </div>
@@ -72,11 +72,13 @@ export default function WelcomePage() {
       <div className="WelcomePage">
         <header className="WelcomePage-header text-center">
           <h1>dictionary</h1>
-          <h5>
-            A picture is worth a thousand words,
-            <br />
-            but you cannot explain pictures without words
-          </h5>
+          <div className="subtitle">
+            <h5>
+              A picture is worth a thousand words,
+              <br />
+              but you cannot explain pictures without words
+            </h5>
+          </div>
           <form onSubmit={handleSubmit}>
             <input type="search" placeholder="..." onChange={wordValue} />
             <input type="submit" value="Search Word" />

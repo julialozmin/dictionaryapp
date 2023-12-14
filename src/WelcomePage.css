@@ -7,7 +7,6 @@
 }
 
 .WelcomePage h5 {
-  font-family: var(--body-font);
   font-size: 30px;
   font-weight: 500;
   color: var(--blue-color);
@@ -15,7 +14,6 @@
 }
 
 .WelcomePage input {
-  font-family: var(--body-font);
   font-size: 16px;
   padding: 6px 8px 6px 8px;
   margin-bottom: 150px;
@@ -25,8 +23,8 @@
   font-family: var(--accent-font);
   font-size: 90px;
   color: var(--neutral-color);
-  margin: 0px 0px 20px;
-  padding-top: 30px;
+  margin: 0px 0px 10px;
+  padding-top: 20px;
 }
 
 .menu-block div {
@@ -34,8 +32,28 @@
 }
 
 .WelcomePage-searchReady-menu input {
-  font-family: var(--terciary-font);
   font-size: 14px;
   padding: 6px 8px 6px 8px;
   margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .WelcomePage h1 {
+    font-size: 90px;
+    margin: 0px 0px 40px;
+    padding-top: 200px;
+  }
+
+  .WelcomePage h5 {
+    font-size: 24px;
+    margin-bottom: 70px;
+  }
+
+  .WelcomePage input {
+    margin-bottom: 70px;
+  }
+
+  .WelcomePage-searchReady .appLogo {
+    text-align: center;
+  }
 }
