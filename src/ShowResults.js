@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./ShowResults.css";
+import "./styles/ShowResults.css";
 
 export default function ShowResults(props) {
   return (

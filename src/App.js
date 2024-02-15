@@ -1,6 +1,6 @@
 import WelcomePage from "./WelcomePage";
 
-import "./App.css";
+import "./styles/App.css";
 
 function App() {
   return (

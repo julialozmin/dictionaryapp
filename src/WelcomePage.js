@@ -4,7 +4,7 @@ import DefinitionDisplay from "./DefinitionDisplay";
 import ImagesDisplay from "./ImagesDisplay";
 import axios from "axios";
 
-import "./WelcomePage.css";
+import "./styles/WelcomePage.css";
 
 export default function WelcomePage() {
   const [word, setWord] = useState("");

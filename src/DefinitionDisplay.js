@@ -1,7 +1,7 @@
 import React from "react";
 import Definition from "./Definition";
 
-import "./DefinitionDisplay.css";
+import "./styles/DefinitionsDisplay.css";
 
 export default function DefinitionsDisplay(props) {
   if (props.definitions) {

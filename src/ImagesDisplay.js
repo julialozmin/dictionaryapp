@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./ImagesDisplay.css";
+import "./styles/ImagesDisplay.css";
 
 export default function ImagesDisplay(props) {
   if (props.data) {
